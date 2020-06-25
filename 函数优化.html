@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add2(a, b = 1) {
+            return a + b;
+        }
+        console.log(add2(20));
+
+        //不定参数
+        function fun(...values) {
+            console.log(values.length)
+        }
+        fun(1, 2)
+        fun(1, 2, 3, 4)
+
+        //箭头函数
+        var print = obj => console.log(obj);
+        print("hello");
+
+        var sum = function (a, b) {
+            c = a + b;
+            return a + c;
+        }
+
+        var sum2 = (a, b) => a + b;
+        console.log(sum2(11, 12));
+
+        var sum3 = (a, b) => {
+            c = a + b;
+            return a + c;
+        }
+        console.log(sum3(10, 20));
+
+        //箭头函数+解构
+        const person = {
+            name: "jack",
+            age: 21,
+            language: ['java', 'js', 'css']
+        }
+        var hello2 = ({ name }) => console.log("hello," + name);
+        hello2(person);
+    </script>
+</body>
+
+</html>
